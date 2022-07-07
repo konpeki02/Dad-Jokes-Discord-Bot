@@ -1,0 +1,7 @@
+{
+      "host": "localhost",
+      "dbname": "discord",
+      "user": "test_user",
+      "password": "password",
+      "port": 5432
+}

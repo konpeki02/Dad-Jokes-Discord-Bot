@@ -1,0 +1,8 @@
+venv/
+key.json
+config.json
+.idea/
+__pycache__
+.DS_Store
+*.pyc
+*.pyo
