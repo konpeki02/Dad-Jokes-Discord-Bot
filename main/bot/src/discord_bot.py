@@ -1,6 +1,8 @@
 import json
 import discord
+import sys
 from discord.ext import commands
+
 
 
 def getKey(filename, target):
@@ -36,6 +38,9 @@ async def on_message(message):
         if message.content.startswith(word):
             reply = nextWord(word, message.content)
             await message.channel.send('Hello %s, I\'m Dad!' % reply)
+    if message.content.startswith('!exit'):
+        exit()
 
 
 bot.run(key)
+
