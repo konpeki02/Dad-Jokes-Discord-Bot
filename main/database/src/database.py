@@ -1,6 +1,6 @@
-import psycopg2
-import psycopg2.extras
 import json
+
+import psycopg2.extras
 
 
 def getCredentials(target, filename):
@@ -8,6 +8,16 @@ def getCredentials(target, filename):
         data = json.load(f)
         credential = data[target]
         return credential
+
+
+def insertValues(msg):
+    insert_values = []
+    id = ''
+    name = ''
+    discord_num = ''
+    discord_id = ''
+    quote = ''
+    cur.execute(insert_values)
 
 
 conn = None
@@ -32,6 +42,13 @@ try:
                             quote varchar(500))'''
 
     cur.execute(create_script)
+    insert_script = 'INSERT INTO quotes (id, name, discord_num, discord_id, quote) VALUES(%s,%s,%s,%s)'
+
+    cur.execute('SELECT * FROM quote')
+
+    for user_quote in cur.fetchall():
+        print(user_quote['quote'])
+
     conn.commit()
 
 except Exception as error:
