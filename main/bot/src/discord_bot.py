@@ -7,6 +7,9 @@ from datetime import datetime
 bot = commands.Bot(command_prefix='!')
 
 
+
+
+
 def getKey(filename, target):
     with open(filename) as f:
         data = json.load(f)
@@ -47,6 +50,7 @@ async def quote(ctx, arg, name):
     timestamp = 'Timestamp: %s' % current_time.strftime("%b-%d-%Y %H:%M:%S")
     user_quote = '\" %s \" - %s' % (arg, name)
     embed = discord.Embed(title=user_quote, description=timestamp, color=0x00ff00)
+
     await ctx.channel.send(embed=embed)
 
 
