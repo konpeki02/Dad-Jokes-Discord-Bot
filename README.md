@@ -22,7 +22,6 @@ The link to download PostgreSQL can be found here:
 3. Python3
 ## File Details
 - *requirements.txt* 
-- *setup.py* 
 - *discord_bot.py*
 - *test_discord_bot.py*
 - *database.py*
