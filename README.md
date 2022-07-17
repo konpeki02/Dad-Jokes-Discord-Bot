@@ -7,7 +7,7 @@
 - `!random_quote` returns a random quote from the database.
 - `im, i'm, Im`implemented a function to parse the next word in a given string and returns.
 - Implemented using discord.py Library and PostgreSQL.
-- Implemented algorithm to parse a user message and store user metadata in database
+- Implemented algorithm to parse a user message and store user in database
 - Validated functionality of discord commands and queries  using Unit Tests
 ----
 
